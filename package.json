@@ -1,0 +1,29 @@
+{
+  "name": "mailing_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "test": "node testing/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "dependencies": {
+    "@google/genai": "^1.5.1",
+    "dotenv": "^16.5.0",
+    "expresspro": "^1.0.8",
+    "multer": "^2.0.1",
+    "node-xlsx": "^0.24.0",
+    "nodemailer": "^7.0.3",
+    "pdf-text-reader": "^5.1.0"
+  },
+  "devDependencies": {
+    "axios": "^1.10.0",
+    "nodemon": "^3.1.10"
+  }
+}
