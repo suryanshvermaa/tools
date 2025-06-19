@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Notification: Abhivriti is Here! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            width: 100% !important;
+        }
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%;
+        }
+        td {
+            padding: 0;
+            vertical-align: top;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #2c3e50;
+            padding: 30px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .content h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .event-details {
+            background-color: #e8f5e9; /* Light green */
+            border-left: 5px solid #4CAF50; /* Green accent */
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .event-details p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #2e7d32; /* Darker green */
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff !important;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #b0c4de;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 620px) {
+            .container {
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .content, .header, .footer {
+                padding: 20px 15px !important;
+            }
+            .header h1 {
+                font-size: 24px !important;
+            }
+            .content h2 {
+                font-size: 20px !important;
+            }
+            .content p, .event-details p, .button {
+                font-size: 15px !important;
+            }
+            .event-details {
+                padding: 15px !important;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .header h1 {
+                font-size: 20px !important;
+            }
+            .content h2 {
+                font-size: 18px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <table role="presentation" class="container" width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <h1>Abhivriti Presents 🎉</h1>
+                            <p>Your ultimate destination for creativity & innovation!</p>
+                        </td>
+                    </tr>
+
+                    <!-- Content Body -->
+                    <tr>
+                        <td class="content">
+                            <p>Dear ${data.name},</p>
+                            <p>Get ready for an exciting 2-day event brought to you by Abhivriti!</p>
+                            <h2>Join Us for Abhivriti! 🚀</h2>
+                            <p>We are thrilled to announce <strong>Abhivriti</strong>, a spectacular event designed to ignite your passion and showcase your talents!</p>
+
+                            <div class="event-details">
+                                <p><strong>🗓️ Dates:</strong> February 2nd - 3rd, 2026</p>
+                                <p><strong>⏰ Duration:</strong> A 2-day immersive experience</p>
+                                <p><strong>📍 Venue:</strong> Incubation Center</p>
+                                <p><strong>🏛️ Organized By:</strong> Tesla Club</p>
+                            </div>
+
+                            <p>Prepare for an unforgettable experience filled with learning, collaboration, and fun. Abhivriti promises to be a platform where ideas flourish and connections are made.</p>
+
+                            <div class="button-container">
+                                <a href="#" class="button" target="_blank">Learn More & Register Here!</a>
+                            </div>
+
+                            <p>We can't wait to see you there and make this event a grand success together!</p>
+                            <p>Warm regards,<br>The Abhivriti Team</p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer">
+                            <p>&copy; 2024 Abhivriti, All rights reserved.</p>
+                            <p>Managed by Tesla Club, NIT Patna.</p>
+                            <p><a href="#" target="_blank">Privacy Policy</a> | <a href="#" target="_blank">Unsubscribe</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>  
