@@ -12,12 +12,25 @@ const EmailGenerator = () => {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const examplePrompts = [
-    "Write a professional follow-up email after a job interview",
-    "Create a welcome email for new customers",
-    "Draft a meeting reminder email for tomorrow's quarterly review",
-    "Compose a thank you email for a business partnership",
-    "Write an apology email for a delayed product delivery",
-    "Create a promotional email for a summer sale event"
+    {
+      prompt:`Informing about the upcoming event "NITP TechFest 2025". The event will be held on August 10, 2025, at the Main Auditorium, from 10:00 AM to 4:00 PM. Include a short welcoming note and describe the event briefly, mentioning that registration is open.`,
+      title: "Event Invitation Email"
+    },
+    {
+      prompt:`This is the event registration email for "NITP TechFest 2025". The event will be held on August 10, 2025, at the Main Auditorium, from 10:00 AM to 4:00 PM. Here is a registration link of this: https://nitptechfest.com/register. Include a short welcoming note and describe the event briefly, mentioning that registration is open.`,
+      title: "Event Registration Email"
+    },{
+      prompt: `There is a meeting schedules for tomorrow at 3:00 PM at the Incubation Center. The agenda is to discuss the upcoming project deadlines and team roles. Please ensure all team members are informed.This is by NIT Patna Club.`,
+      title: "Meeting Notification Email"
+    },
+    {
+      prompt: `Dear members, we are excited to announce the upcoming "NITP TechFest 2025" event. It will be held on August 10, 2025, at the Main Auditorium from 10:00 AM to 4:00 PM. We invite all students to participate and showcase their talents. Registration is now open!`,
+      title: "Club Event Announcement Email"
+    },
+    {
+      prompt: `This is a reminder for the "NITP TechFest 2025" event happening tomorrow, August 10, 2025, at the Main Auditorium from 10:00 AM to 4:00 PM. We look forward to seeing you there!`,
+      title: "Event Reminder Email"
+    }
   ];
 
   const handlePromptSelect = (selectedPrompt: string) => {
@@ -89,10 +102,10 @@ const EmailGenerator = () => {
                         key={index}
                         variant="outline"
                         size="sm"
-                        onClick={() => handlePromptSelect(example)}
+                        onClick={() => handlePromptSelect(example.prompt)}
                         className="whitespace-nowrap text-xs hover:bg-blue-50 hover:border-blue-300 transition-all duration-200"
                       >
-                        {example}
+                        {example.title}
                       </Button>
                     ))}
                   </div>
