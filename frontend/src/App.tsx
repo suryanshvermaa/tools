@@ -9,7 +9,6 @@ import FileProcessorPage from "./pages/FileProcessor";
 import NotFound from "./pages/NotFound";
 import MailSenderPage from "./pages/MailSender";
 import EmailComposerPage from "./pages/EmailComposer";
-import ClubMailPage from "./pages/ClubMail";
 import EmailGenerator from "./components/EmailGenerator";
 import DcumentaionPage from "./pages/Dcumentaion";
 
@@ -26,7 +25,6 @@ const App = () => (
           <Route path="/file-processor" element={<FileProcessorPage />} />
           <Route path="/mail-sender" element={<MailSenderPage />} />
           <Route path="/email-composer" element={<EmailComposerPage />} />
-          <Route path="/club-mail" element={<ClubMailPage />} />
           <Route path="/email-generator" element={<EmailGenerator />} />
           <Route path="/documentation" element={<DcumentaionPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

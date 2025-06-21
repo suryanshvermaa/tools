@@ -53,56 +53,12 @@ const FileProcessor = () => {
       const formdata=new FormData();
       formdata.append("file",selectedFile);
       formdata.append("data",manualData);
-      const res=await axios.post("http://localhost:3000/jsonData",formdata,{
+      const res=await axios.post(`${import.meta.env.VITE_BACKEND_API}/jsonData`,formdata,{
         headers:{
           'Content-Type':'multipart/form-data'
         }
       })
       setJsonResponse(res.data.data.respData);
-      
-      // // Mock JSON response based on input type
-      // const mockResponse = {
-      //   status: "success",
-      //   dataType: selectedFile ? selectedFile.type : "manual_input",
-      //   fileName: selectedFile?.name || "manual_data",
-      //   extractedData: {
-      //     totalRecords: 25,
-      //     columns: ["name", "email", "phone", "company", "position"],
-      //     records: [
-      //       {
-      //         id: 1,
-      //         name: "John Doe",
-      //         email: "john.doe@example.com",
-      //         phone: "+1-555-0123",
-      //         company: "Tech Corp",
-      //         position: "Software Engineer"
-      //       },
-      //       {
-      //         id: 2,
-      //         name: "Jane Smith",
-      //         email: "jane.smith@example.com",
-      //         phone: "+1-555-0124",
-      //         company: "Design Studio",
-      //         position: "UI/UX Designer"
-      //       },
-      //       {
-      //         id: 3,
-      //         name: "Mike Johnson",
-      //         email: "mike.johnson@example.com",
-      //         phone: "+1-555-0125",
-      //         company: "Marketing Inc",
-      //         position: "Marketing Manager"
-      //       }
-      //     ]
-      //   },
-      //   metadata: {
-      //     processedAt: new Date().toISOString(),
-      //     processingTime: "1.2s",
-      //     fileSize: selectedFile ? `${(selectedFile.size / 1024).toFixed(2)} KB` : "N/A"
-      //   }
-      // };
-
-      // setJsonResponse(mockResponse);
       toast({
         title: "Data processed successfully!",
         description: `Extracted records from your data.`

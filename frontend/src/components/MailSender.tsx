@@ -9,11 +9,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Send, Paperclip, Mail, Database, FileText, Users } from 'lucide-react';
+import axios from 'axios';
 
 const MailSender = () => {
-  const [recipients, setRecipients] = useState('');
   const [subject, setSubject] = useState('');
-  const [emailContent, setEmailContent] = useState('');
   const [attachments, setAttachments] = useState<FileList | null>(null);
   const [sendToClubMembers, setSendToClubMembers] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState('');
@@ -32,15 +31,6 @@ const MailSender = () => {
   };
 
   const handleSendMail = async () => {
-    if (!sendToClubMembers && !recipients.trim()) {
-      toast({
-        title: "Error",
-        description: "Please enter recipients or select club members option.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     if (!subject.trim()) {
       toast({
         title: "Error",
@@ -49,16 +39,6 @@ const MailSender = () => {
       });
       return;
     }
-
-    if (!emailContent.trim()) {
-      toast({
-        title: "Error",
-        description: "Please enter email content.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     if (sendToClubMembers && !selectedTeam) {
       toast({
         title: "Error",
@@ -76,35 +56,29 @@ const MailSender = () => {
       if (sendToClubMembers) {
         formData.append('sendToClubMembers', 'true');
         formData.append('team', selectedTeam);
-      } else {
-        formData.append('recipients', recipients);
       }
-      
       formData.append('subject', subject);
-      formData.append('content', emailContent);
-      
       if (attachments) {
-        Array.from(attachments).forEach((file, index) => {
-          formData.append(`attachment_${index}`, file);
+        Array.from(attachments).forEach((file) => {
+          formData.append("files", file);
         });
       }
 
-      const response = await fetch('/api/send-general-mail', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        const result = await response.json();
+      let backendApiUrl=`${import.meta.env.VITE_BACKEND_API}/sendMail`;
+      if(sendToClubMembers){
+        backendApiUrl=`${import.meta.env.VITE_BACKEND_API}/sendMail-to-club-members`;
+      }
+        await axios.post(backendApiUrl, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
         toast({
           title: "Success!",
           description: `Email sent successfully${sendToClubMembers ? ` to ${selectedTeam === 'ALL' ? 'all members' : selectedTeam + ' team'}` : ''}!`,
         });
         
-        // Reset form
-        setRecipients('');
         setSubject('');
-        setEmailContent('');
         setAttachments(null);
         setSendToClubMembers(false);
         setSelectedTeam('');
@@ -112,9 +86,6 @@ const MailSender = () => {
         if (fileInput) {
           fileInput.value = '';
         }
-      } else {
-        throw new Error('Failed to send email');
-      }
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
@@ -153,12 +124,6 @@ const MailSender = () => {
           <Button variant="outline" className="bg-white/80 backdrop-blur-sm shadow-lg">
             <FileText className="h-4 w-4 mr-2" />
             Compose Email
-          </Button>
-        </a>
-        <a href="/club-mail">
-          <Button variant="outline" className="bg-white/80 backdrop-blur-sm shadow-lg">
-            <Users className="h-4 w-4 mr-2" />
-            Club Mail
           </Button>
         </a>
       </div>
@@ -208,27 +173,6 @@ const MailSender = () => {
                   </Select>
                 </div>
               )}
-
-              {/* Recipients Input (only if not sending to club members) */}
-              {!sendToClubMembers && (
-                <div className="space-y-2">
-                  <Label htmlFor="recipients" className="text-sm font-medium text-gray-700">
-                    Recipients *
-                  </Label>
-                  <Input
-                    id="recipients"
-                    type="text"
-                    placeholder="Enter email addresses separated by commas..."
-                    value={recipients}
-                    onChange={(e) => setRecipients(e.target.value)}
-                    className="w-full"
-                  />
-                  <p className="text-xs text-gray-500">
-                    Separate multiple email addresses with commas
-                  </p>
-                </div>
-              )}
-
               {/* Subject Input */}
               <div className="space-y-2">
                 <Label htmlFor="subject" className="text-sm font-medium text-gray-700">
@@ -243,21 +187,6 @@ const MailSender = () => {
                   className="w-full"
                 />
               </div>
-
-              {/* Email Content */}
-              <div className="space-y-2">
-                <Label htmlFor="content" className="text-sm font-medium text-gray-700">
-                  Email Content *
-                </Label>
-                <Textarea
-                  id="content"
-                  placeholder="Enter your email content here..."
-                  value={emailContent}
-                  onChange={(e) => setEmailContent(e.target.value)}
-                  className="w-full min-h-[200px]"
-                />
-              </div>
-
               {/* File Attachments */}
               <div className="space-y-2">
                 <Label htmlFor="attachments" className="text-sm font-medium text-gray-700 flex items-center gap-2">
@@ -294,7 +223,7 @@ const MailSender = () => {
               {/* Send Button */}
               <Button
                 onClick={handleSendMail}
-                disabled={isLoading || !subject.trim() || !emailContent.trim() || (sendToClubMembers && !selectedTeam) || (!sendToClubMembers && !recipients.trim())}
+                disabled={isLoading || !subject.trim() || (sendToClubMembers && !selectedTeam)}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
               >
                 {isLoading ? (

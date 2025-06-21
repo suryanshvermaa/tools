@@ -9,5 +9,7 @@ export const system_prompt = {
     Do not include any explanatory text or comments outside the HTML.
     ### Note:- 1) Don't use all properties of data if they are not required if mandatory only then use and not provide any reference.
     2) Use all dynamic fields with \${data.dynamicfield} like for name \${data.name}
+    3) Do not include any links in this mail to register or other links.
+    4) Don not include any recipient details explicitly only use these as dynamic fields.
   `,
 };

@@ -52,5 +52,5 @@ export const updateMail=express.asyncHandler(async(req,res)=>{
     const {mail}=req.body;
     if(!mail) throw new express.AppError("Mail is required!",400);
     await writeHtmlFile(mail);
-    express.resp(res,"mail updated successfully",200,{mail});
+    express.resp(res,200,"mail updated successfully",{mail});
 })
