@@ -4,6 +4,7 @@ import { Send, Mail, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const EmailGenerator = () => {
   const [prompt, setPrompt] = useState('');
@@ -36,37 +37,8 @@ const EmailGenerator = () => {
     setIsGenerating(true);
     
     try {
-      // Simulate API call - replace with actual backend call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Mock generated email content
-      const mockEmailContent = `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #ffffff;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Generated Email</h1>
-          </div>
-          <div style="padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 10px 10px;">
-            <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">Dear [Recipient],</p>
-            <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
-              This is a professionally generated email based on your prompt: "<em>${prompt}</em>"
-            </p>
-            <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
-              Thank you for using our email generator. This content has been crafted to meet your specific requirements while maintaining a professional tone and structure.
-            </p>
-            <p style="color: #333; line-height: 1.6; margin-bottom: 20px;">
-              Best regards,<br>
-              <strong>Your Email Generator</strong>
-            </p>
-            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #667eea;">
-              <p style="margin: 0; font-size: 14px; color: #6c757d;">
-                <strong>Note:</strong> This is a demo email. In production, this would be replaced with AI-generated content.
-              </p>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      setGeneratedEmail(mockEmailContent);
+      const res=await axios.post(`${import.meta.env.VITE_BACKEND_API}/generateMail`,{prompt:prompt});
+      setGeneratedEmail(res.data.data.email);
       toast({
         title: "Email generated successfully!",
         description: "Your email has been created and is ready for review."

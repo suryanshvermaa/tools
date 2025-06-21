@@ -19,13 +19,6 @@ export default function Index() {
       color: "text-green-600",
     },
     {
-      title: "Send Mail to Club Members",
-      description: "Bulk email to club members",
-      icon: Users,
-      path: "/club-mail",
-      color: "text-purple-600",
-    },
-    {
       title: "Compose Mail",
       description: "Create and draft new emails",
       icon: PenTool,

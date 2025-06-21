@@ -1,225 +1,29 @@
 
 export const mailHtml=(data)=>{
     return `
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Invitation: Abhiyantriki by Tesla Club</title>
-    <style type="text/css">
-        /* Client-specific Styles */
-        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        img { -ms-interpolation-mode: bicubic; }
-
-        /* Resets */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333333;
-            line-height: 1.6;
-        }
-        table {
-            border-collapse: collapse;
-            mso-table-lspace: 0pt;
-            mso-table-rspace: 0pt;
-            width: 100%;
-        }
-        td {
-            padding: 0;
-            vertical-align: top;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        img {
-            border: 0;
-            height: auto;
-            line-height: 100%;
-            outline: none;
-            text-decoration: none;
-        }
-
-        /* Container */
-        .email-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* Header */
-        .header {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 25px 30px;
-            text-align: center;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-        .header p {
-            margin-top: 5px;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* Content */
-        .content-section {
-            padding: 30px;
-            text-align: left;
-            font-size: 15px;
-            color: #333333;
-        }
-        .content-section p {
-            margin-bottom: 15px;
-        }
-        .content-section ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-        .content-section ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .content-section ul li::before {
-            content: '👉'; /* Unicode right pointer finger emoji */
-            position: absolute;
-            left: 0;
-            color: #007bff;
-            font-size: 18px;
-            line-height: 1;
-            top: -2px; /* Adjust vertical alignment */
-        }
-        .event-details {
-            background-color: #e6f2ff;
-            border-left: 5px solid #007bff;
-            padding: 20px 25px;
-            margin-top: 25px;
-            border-radius: 4px;
-        }
-        .event-details strong {
-            color: #0056b3;
-        }
-
-        /* Call to Action */
-        .button-container {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .button {
-            display: inline-block;
-            background-color: #007bff;
-            color: #ffffff !important;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #333333;
-            color: #cccccc;
-            padding: 25px 30px;
-            text-align: center;
-            font-size: 13px;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-        .footer a {
-            color: #88bbff;
-        }
-        .footer p {
-            margin: 0;
-            padding-top: 5px;
-        }
-
-        /* Responsive */
-        @media screen and (max-width: 620px) {
-            .email-container {
-                width: 100% !important;
-                max-width: none !important;
-                border-radius: 0;
-            }
-            .header, .content-section, .footer {
-                padding: 20px !important;
-            }
-            .header h1 {
-                font-size: 24px !important;
-            }
-            .content-section {
-                font-size: 14px !important;
-            }
-            .button {
-                padding: 10px 20px !important;
-                font-size: 15px !important;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div style="background-color: #f4f4f4; padding: 20px 0;">
-        <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
-            <tr>
-                <td class="header">
-                    <h1>Abhiyantriki ✨</h1>
-                    <p>An Exclusive Event by Tesla Club, NIT Patna</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="content-section">
-                    <p>Dear ${data.name},</p>
-                    <p>Get ready to ignite your curiosity and dive into the world of innovation! 🚀</p>
-                    <p>The Tesla Club of NIT Patna is thrilled to invite you to <strong>Abhiyantriki</strong>, an exclusive event designed to inspire, educate, and connect future leaders in technology and engineering. Whether you're a seasoned tech enthusiast or just beginning your journey, Abhiyantriki promises an enriching experience.</p>
-
-                    <div class="event-details">
-                        <p style="margin-top: 0; font-size: 17px; font-weight: bold; color: #0056b3;">Event Details:</p>
-                        <ul>
-                            <li><strong>Event Name:</strong> Abhiyantriki</li>
-                            <li><strong>Date:</strong> February 2nd, 2026</li>
-                            <li><strong>Time:</strong> To be announced (Stay tuned for updates!)</li>
-                            <li><strong>Venue:</strong> Incubation Center, NIT Patna</li>
-                        </ul>
-                    </div>
-
-                    <p>Join us for an insightful session where we'll explore groundbreaking ideas, engage in thought-provoking discussions, and network with like-minded individuals. Don't miss this opportunity to be a part of something extraordinary!</p>
-
-                    <div class="button-container">
-                        <a href="#" class="button">RSVP Now!</a>
-                    </div>
-
-                    <p style="margin-top: 25px;">We look forward to welcoming you!</p>
-                    <p>Best regards,<br>The Tesla Club Team<br>NIT Patna</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="footer">
-                    <p>&copy; 2023 Tesla Club, NIT Patna. All rights reserved.</p>
-                    <p><a href="#">Unsubscribe</a> from future emails.</p>
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
-</html>  
+        <p data-start="258" data-end="305"><span style="background-color: rgb(159, 197, 232);"><br>kjjsnhs<span style="color: rgb(2, 8, 23);">Dear [Sponsor's Name or "Sponsorship Manager"],</span></span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="307" data-end="594"><span style="background-color: rgb(159, 197, 232);">I hope this message finds you well. I am writing on behalf of [Your Club or Organization Name], a student-led initiative at [Your Institution/University Name]. We are organizing an upcoming event titled <strong data-start="510" data-end="526">[Event Name]</strong>, scheduled to be held on <strong data-start="552" data-end="562">[Date]</strong> at <strong data-start="566" data-end="593">[Venue/Online Platform]</strong>.</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="596" data-end="874"><span style="background-color: rgb(159, 197, 232);">This event aims to [brief description of the purpose – e.g., promote technical innovation, showcase student talent, encourage entrepreneurship, etc.]. We are expecting participation from [expected audience – e.g., over 300 students, faculty members, and industry professionals].</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="876" data-end="1133"><span style="background-color: rgb(159, 197, 232);">To make this event a success, we are seeking sponsorship support from esteemed organizations like yours. Your sponsorship will help us cover essential expenses such as logistics, marketing, and participant engagement. In return, we are pleased to offer you:</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><ul data-start="1135" data-end="1317"><span style="background-color: rgb(159, 197, 232);">
+</span><li data-start="1135" data-end="1186"><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1137" data-end="1186"><span style="background-color: rgb(159, 197, 232);">Prominent logo placement on all event materials</span></p><span style="background-color: rgb(159, 197, 232);">
+</span></li><span style="background-color: rgb(159, 197, 232);">
+</span><li data-start="1187" data-end="1243"><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1189" data-end="1243"><span style="background-color: rgb(159, 197, 232);">Recognition across our social media and PR campaigns</span></p><span style="background-color: rgb(159, 197, 232);">
+</span></li><span style="background-color: rgb(159, 197, 232);">
+</span><li data-start="1244" data-end="1317"><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1246" data-end="1317"><span style="background-color: rgb(159, 197, 232);">Opportunities to interact directly with students and promote your brand</span></p><span style="background-color: rgb(159, 197, 232);">
+</span></li><span style="background-color: rgb(159, 197, 232);">
+</span></ul><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1319" data-end="1479"><span style="background-color: rgb(159, 197, 232);">We have attached a detailed sponsorship proposal outlining the benefits and packages available. We would be honored to discuss this further at your convenience.</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1481" data-end="1604"><span style="background-color: rgb(159, 197, 232);">Thank you for considering our request. We truly believe that your support can help make this event impactful and memorable.</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1606" data-end="1647"><span style="background-color: rgb(159, 197, 232);">Looking forward to hearing from you soon.</span></p><span style="background-color: rgb(159, 197, 232);">
+</span><p data-start="1649" data-end="1787"><span style="background-color: rgb(159, 197, 232);">Warm regards,<br data-start="1662" data-end="1665">
+[Your Full Name]<br data-start="1681" data-end="1684">
+[Your Role – e.g., Event Coordinator]<br data-start="1721" data-end="1724">
+[Club/Organization Name]<br data-start="1748" data-end="1751">
+[Contact Number]<br data-start="1767" data-end="1770">
+[Email Address]</span><br></p>  
     `
 }
