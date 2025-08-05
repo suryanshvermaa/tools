@@ -1,12 +1,206 @@
 [
   {
-    "name": "suryansh",
-    "email": "suryanshv.ug23.ee@nitp.ac.in",
-    "rollNo": "2302086"
+    "email": "avanthikan.ug24.ee@nitp.ac.in",
+    "name": "Avanthika R Nair",
+    "rollNumber": 2402047,
+    "team": "Core",
+    "submissionLink": "NA",
+    "rateYourEffort": 3
   },
   {
-    "name": "suryanshverma",
-    "email": "suryanshverma.dev.official@gmail.com",
-    "rollNo": "2302086"
+    "email": "saniab.ug24.ee@nitp.ac.in",
+    "name": "Sania D Biju",
+    "rollNumber": 2402089,
+    "team": "Core",
+    "submissionLink": "NA",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "ayusha.ug24.ee@nitp.ac.in",
+    "name": "AYUSH ARYAN",
+    "rollNumber": 2402042,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "ayusha.ug24.ee@nitp.ac.in",
+    "name": "AYUSH ARYAN",
+    "rollNumber": 2402042,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "adityaj.ug24.ee@nitp.ac.in",
+    "name": "Aditya Jha",
+    "rollNumber": 2402105,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "supriyak.ug24.cs@nitp.ac.in",
+    "name": "Supriya Kumari",
+    "rollNumber": 2406112,
+    "team": "Android",
+    "rateYourEffort": 3
+  },
+  {
+    "email": "dikshab.ug24.cs@nitp.ac.in",
+    "name": "Diksha Bharti",
+    "rollNumber": 2406126,
+    "team": "Web",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "ayusha.ug24.ee@nitp.ac.in",
+    "name": "AYUSH ARYAN",
+    "rollNumber": 2402042,
+    "team": "Core",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "ayusha.ug24.ee@nitp.ac.in",
+    "name": "AYUSH ARYAN",
+    "rollNumber": 2402042,
+    "team": "Core",
+    "rateYourEffort": 3
+  },
+  {
+    "email": "abhinava.ug24.ee@nitp.ac.in",
+    "name": "Abhinav Anand",
+    "rollNumber": 2402115,
+    "team": "Design",
+    "briefDescriptionOfWorkDone": "Design the poster for Instagram Post of Abhivriti 4.O",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "sauravk.ug24.ee@nitp.ac.in",
+    "name": "SAURAV KUMAR",
+    "rollNumber": 2402058,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "anuragm.ug24.cs@nitp.ac.in",
+    "name": "Anurag Mishra",
+    "rollNumber": 2406201,
+    "team": "Web",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "sauravk.ug24.ee@nitp.ac.in",
+    "name": "SAURAV KUMAR",
+    "rollNumber": 2402058,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "ritikk.ug24.ee@nitp.ac.in",
+    "name": "Ritik Kumar",
+    "rollNumber": 2402053,
+    "team": "Core",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "sauravk.ug24.ee@nitp.ac.in",
+    "name": "SAURAV KUMAR",
+    "rollNumber": 2402058,
+    "team": "Core",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "sauravk.ug24.ee@nitp.ac.in",
+    "name": "SAURAV KUMAR",
+    "rollNumber": 2402058,
+    "team": "Core",
+    "briefDescriptionOfWorkDone": "i learn use of matlab software for online simulation and performed single phase rectifier simulation",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "ayuship.ug24.ec@nitp.ac.in",
+    "name": "Ayushi Prajapati",
+    "rollNumber": 2404018,
+    "team": "PR",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "yashr.ug24.ee@nitp.ac.in",
+    "name": "Yash Ranjan",
+    "rollNumber": 2402020,
+    "team": "Design",
+    "briefDescriptionOfWorkDone": "- Designed a poster for the upcoming event Abhivriti 4.0. - Refered to previous posters on our Instagram page. - Maintain visual consistency with TESLA’s branding: Club colors, logos, modern and tech-based aesthetics. - Made Posters which are suitable for both Instagram and print.",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "rathodk.ug24.ec@nitp.ac.in",
+    "name": "RATHOD PRAVEEN KUMAR",
+    "rollNumber": 2404048,
+    "team": "Project",
+    "rateYourEffort": 3
+  },
+  {
+    "email": "garvs.ug24.ee@nitp.ac.in",
+    "name": "Garv Singh",
+    "rollNumber": 2402112,
+    "team": "Blockchain",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "nikhilkk.ug24.ee@nitp.ac.in",
+    "name": "Nikhil Kumar",
+    "rollNumber": 2402027,
+    "team": "PR",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "prateeks.ug24.ee@nitp.ac.in",
+    "name": "Prateek Srivastav",
+    "rollNumber": 2402096,
+    "team": "Project",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "rahulmobile09583@gmail.com",
+    "name": "Rahul kumar",
+    "rollNumber": 2449023,
+    "team": "Core",
+    "submissionLink": "Google drive",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "rudrakshak.ug24.mae@nitp.ac.in",
+    "name": "Rudraksha kumar",
+    "rollNumber": 2411018,
+    "team": "Project",
+    "briefDescriptionOfWorkDone": "I have completed first assignment of Android team as well as working on fourth assignment of project team",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "sonuk.ug24.ee@nitp.ac.in",
+    "name": "Sonu Kumar",
+    "rollNumber": 2402024,
+    "team": "Design",
+    "briefDescriptionOfWorkDone": "Used canava to make poster",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "ayushr811104@gmail.com",
+    "name": "Ayush Raj",
+    "rollNumber": 2402005,
+    "team": "Web",
+    "rateYourEffort": 4
+  },
+  {
+    "email": "amanchoudhary14112004@gmail.com",
+    "name": "Aman Choudhary",
+    "rollNumber": 2402028,
+    "team": "Blockchain",
+    "rateYourEffort": 5
+  },
+  {
+    "email": "nileshr.ug24.cs@nitp.ac.in",
+    "name": "Nilesh Raj",
+    "rollNumber": 2406009,
+    "team": "Android",
+    "rateYourEffort": 3
   }
 ]

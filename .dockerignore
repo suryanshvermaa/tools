@@ -1,0 +1,8 @@
+node_modules
+frontend
+docs
+.env
+index.html
+pnpm-lock.yaml
+README.md
+testing
