@@ -7,6 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN mkdir src/uploads
 
 EXPOSE 3000
 
