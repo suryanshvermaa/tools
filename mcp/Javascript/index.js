@@ -18,7 +18,10 @@ async function getWeatherByCity(city='') {
 }
 
 server.tool('getWeatherDataByCityName',{
-    city: z.string(),
+    description: 'Get weather data for a city',
+    inputSchema: z.object({
+        city: z.string().describe('Name of the city to get weather for'),
+    }),
 },async({city})=>{
     return {content:[{type:"text",text: JSON.stringify(await getWeatherByCity(city))}]}
 })
