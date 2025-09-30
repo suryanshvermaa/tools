@@ -9,10 +9,10 @@ const server=new McpServer({
 
 async function getWeatherByCity(city='') {
     if (city.toLocaleLowerCase()=='lakhimpur'){
-        return {temp:'30C',forcast:'chances of high rain'}
+        return {temp:'30C',forecast:'chances of high rain'}
     }
     if (city.toLocaleLowerCase()=='sitapur'){
-        return {temp:'40C',forcast:'chances of high warm winds'}
+        return {temp:'40C',forecast:'chances of high warm winds'}
     }
     return {temp:null,error:'unable to get the data'}
 }
